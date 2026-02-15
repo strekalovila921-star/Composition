@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    tools:context=".presentation.ChoseLevelFragment">
+
+    <TextView
+        android:id="@+id/tv_choose_level_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/SelectALevel"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_level_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#8A2BE2"
+        android:text="@string/Test"
+        android:textSize="20sp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_level_easy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#8DB600"
+        android:textSize="20sp"
+        android:text="@string/easy"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_level_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#FFB347"
+        android:textSize="20sp"
+        android:text="@string/average"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_level_hard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF4F4F"
+        android:text="@string/heavy"
+        android:textSize="20sp"
+        android:textColor="@color/black" />
+
+</LinearLayout>

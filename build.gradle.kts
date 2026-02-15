@@ -1,4 +1,8 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Твой корневой билд-файл
 plugins {
-    alias(libs.plugins.android.application) apply false
+    // Здесь ОБЯЗАТЕЛЬНО должны быть версии (version), так как нет Version Catalog
+    id("com.android.application") version "8.13.2" apply false
+    id("com.android.library") version "8.13.2" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
+    id("org.jetbrains.kotlin.plugin.parcelize") version "1.9.0" apply false
 }

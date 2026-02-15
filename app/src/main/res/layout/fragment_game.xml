@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="8dp"
+    tools:context=".presentation.GameFragment">
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="00:00"
+        android:textColor="#6200EE"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sum"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_shape"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_timer" />
+
+    <TextView
+        android:id="@+id/tv_left_number"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#00796B"
+        android:gravity="center"
+        android:text="7"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/tv_question"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sum" />
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#00796B"
+        android:gravity="center"
+        android:text="@string/question_mark"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_left_number"
+        app:layout_constraintTop_toTopOf="@id/tv_left_number" />
+
+    <TextView
+        android:id="@+id/tv_answers_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Правильных ответов %s (минимум %s)"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/progress_bar" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:secondaryProgressTint="#8BC34A"
+        app:layout_constraintBottom_toTopOf="@+id/gl_options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gl_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_option_1"
+            style="@style/OptionTextStyle"
+            android:background="#8DB600"
+            android:text="1"
+            app:layout_constraintBottom_toTopOf="@+id/tv_option_4"
+            app:layout_constraintEnd_toStartOf="@+id/tv_option_2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_option_2"
+            style="@style/OptionTextStyle"
+            android:background="#FFB347"
+            android:text="2"
+            app:layout_constraintBottom_toTopOf="@+id/tv_option_5"
+            app:layout_constraintEnd_toStartOf="@+id/tv_option_3"
+            app:layout_constraintStart_toEndOf="@+id/tv_option_1" />
+
+        <TextView
+            android:id="@+id/tv_option_3"
+            style="@style/OptionTextStyle"
+            android:background="#B388FF"
+            android:text="3"
+            app:layout_constraintBottom_toTopOf="@+id/tv_option_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_option_2" />
+
+        <TextView
+            android:id="@+id/tv_option_4"
+            style="@style/OptionTextStyle"
+            android:background="#29B6F6"
+            android:text="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_option_5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_option_5"
+            style="@style/OptionTextStyle"
+            android:background="#FF5252"
+            android:text="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_option_6"
+            app:layout_constraintStart_toEndOf="@+id/tv_option_4" />
+
+        <TextView
+            android:id="@+id/tv_option_6"
+            style="@style/OptionTextStyle"
+            android:background="#00E5FF"
+            android:text="6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_option_5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,12 @@
 package com.example.composition.domain.intity
 
+
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 //Настройки игры
+
+
+@Parcelize
 data class GameningSetings(
     // Максимально возможное значение
     val maxSumValue: Int,
@@ -10,4 +16,8 @@ data class GameningSetings(
     val minPercentOfRightAnswer: Int,
     // Время игры в секундах
     val gemeTimerInSecondes: Int
-)
+): Parcelable
+
+
+
+

@@ -1,7 +1,11 @@
 package com.example.composition.domain.intity
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
 // Уровень
-enum class Level {
+@Parcelize
+enum class Level: Parcelable {
 
     TEST, EASY, NORMAL, HARD
  }
