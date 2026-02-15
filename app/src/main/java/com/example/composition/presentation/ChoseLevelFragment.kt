@@ -66,3 +66,7 @@ class ChoseLevelFragment : Fragment() {
             }
         }
     }
+
+private fun sdfsdf(){
+
+}
